@@ -8,6 +8,14 @@ namespace Calculator.CalculatorMechanics
 {
     internal class CalculatorMechanics
     {
+        private bool IsOperator(char c)
+        {
+            if ("+-/*()".IndexOf(c) != -1)
+            {
+                return true;
+            }
+            return false;
+        }
         private byte GetPriority(char c)
         {
             switch (c)
